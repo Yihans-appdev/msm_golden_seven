@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+  <title>MustSeeMoviesGoldenSeven</title>
+  <head>
+    <%= csrf_meta_tags %>
+
+    <%= stylesheet_link_tag    'application', media: 'all' %>
+
+    <!-- Connect to the beta of Bootstrap version 4 -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+
+    <!-- Connect to Font Awesome CSS -->
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <!-- Connect to Bootstrap Javascript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+
+
+    <%= javascript_include_tag 'application' %>
+  </head>
+
+  <body>
+    <div class="container">
+      <%= yield %>
+    </div>
+    
+    <%= dev_tools if Rails.env.development? %>
+  </body>
+</html>
