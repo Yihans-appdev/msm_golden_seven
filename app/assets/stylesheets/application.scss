@@ -25,19 +25,3 @@ body {
 .container {
   flex: 1 0 auto;
 }
-.rails-toolbar {
-  display: flex;
-  justify-content: flex-end;
-
-  .rails-toolbar-button {
-    @include box_shadow(1);
-
-    padding: 20px;
-    text-decoration: none;
-  }
-
-  .rails-toolbar-button:hover {
-    @include box_shadow(5);
-    transition: box-shadow .3s;
-  }
-}
