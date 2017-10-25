@@ -17,12 +17,11 @@ GIT
 
 GIT
   remote: https://github.com/firstdraft/dev_toolbar.git
-  revision: 1a97be53794d5c3a2b8ae139de26dd1287f51398
+  revision: 46f5583cb1e0877efe0aae4e3a34baa214be0fbf
   specs:
     dev_toolbar (0.1.0)
       better_errors
       rails
-      web-console
 
 GIT
   remote: https://github.com/firstdraft/firstdraft_generators.git
