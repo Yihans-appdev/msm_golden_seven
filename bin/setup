@@ -19,6 +19,7 @@ chdir APP_ROOT do
 
   puts '== Creating database =='
   system! 'bin/rails db:migrate'
+  system! 'bin/rails db:seed'
 
   # Install JavaScript dependencies if using Yarn
   # system('bin/yarn')
