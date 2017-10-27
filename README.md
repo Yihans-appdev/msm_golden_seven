@@ -24,25 +24,45 @@ In this application, users will need to Create, Read, Update, and Delete the fol
  - description (text)
  - image_url (string)
 
-You will ultimately build something similar to [Photogram Golden Seven](https://photogram-golden-seven-target.herokuapp.com), but with different tables/columns.
+You will ultimately build something similar to [Photogram Golden Seven](https://photogram-g7-final.herokuapp.com/), but with different tables/columns.
 
 Use the detailed instructions in the README of the `photogram_golden_seven` repository as a guide.
 
 ## Setup
 
- 1. Ensure that you've forked this repo to your own GitHub account.
- 1. Set up [a Cloud9 workspace as usual](https://guides.firstdraft.com/getting-started-with-cloud-9.html) based on this repo.
+ 1. Ensure that you've forked this repo to your own GitHub organization.
+ 1. Set up [a Cloud9 workspace as usual](https://guides.firstdraft.com/getting-started-with-cloud-9.html) based on your repo.
  1. `bin/setup`
  1. Run Project
  1. Navigate to the live app in Chrome.
- 1. Create **all three** models and databases table using `rails generate model ...` at a Terminal prompt, using the [Crud with Ruby Cheatsheet](https://guides.firstdraft.com/crud-with-ruby.html). For example,
+ 1. Create **all three** models and databases table using `rails generate model ...` at a Terminal prompt as per the [Crud with Ruby Cheatsheet](https://guides.firstdraft.com/crud-with-ruby.html).
 
-        rails g model director name:string bio:text dob:string image_url:string
-        rails g model actor name:string bio:text dob:string image_url:string
-        rails g model movie title:string year:integer duration:integer description:text image_url:string
+    To prevent typos, you can copy-paste the following commands:
 
- 1. At a Terminal prompt, `rails db:migrate`
- 1. Add a few rows to each table through Rails Console or ActiveAdmin (navigate to `/admin` in the live app and sign in with `admin@example.com / password`). Or, alternatively, you can run `rails dev:prime` from the command line, which will pre-populate ten rows in each table (I wrote a script to save you some typing). **(You need to create all three tables with exactly the column names above in order for this to work.)**
+
+    ```
+    rails g model director name:string bio:text dob:string image_url:string
+    ```
+
+    ```
+    rails g model actor name:string bio:text dob:string image_url:string
+    ```
+
+    ```
+    rails g model movie title:string year:integer duration:integer description:text image_url:string
+    ```
+
+ 1. To actually execute the instructions that you just generated to create the database tables, at a Terminal prompt do
+
+    ```
+    rails db:migrate
+    ```
+
+ 1. Add a few rows to each table through Rails Console or ActiveAdmin (navigate to `/admin` in the live app and sign in with `admin@example.com / password`).
+
+    Or, alternatively, you can run `rails dev:prime` from the command line, which will pre-populate ten rows in each table (I wrote a script to save you some typing). **(You need to first create _all three_ tables with exactly the column names above in order for this to work.)**
+
+  1. Build the Golden Seven to allow users to interact with all three tables through their web browsers. Refer to the README of `photogram_golden_seven`.
 
 ### READ
 
