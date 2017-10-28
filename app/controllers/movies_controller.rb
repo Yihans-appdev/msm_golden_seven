@@ -37,9 +37,10 @@ class MoviesController < ApplicationController
   
   def update
     @movie = Movie.find(params[:id])
-    @movie.name = params[:name]
-    @movie.dob = params[:Dob]
-    @movie.bio = params[:Bio]
+    @movie.title = params[:title]
+    @movie.year = params[:year]
+    @movie.duration = params[:duration]
+    @movie.description = params[:description]
     @movie.image_url = params[:image_url]
     @movie.save
     

@@ -1,35 +1,40 @@
 <div class='page-header'>
-  <h1>Edit Actor</h1>
+  <h1>Edit Movie</h1>
 </div>
 
-<form action="/actors/<%= @actor.id %>/update">
+<form action="/movies/<%= @movie.id %>/update">
     <div class='form-group'>
-    <label for="name" class="col-sm-2 control-label">actor Name</label>
+    <label for="title" class="col-sm-2 control-label">Movie Title</label>
     <div class="col-sm-10">
-      <input type='text' id='name' name='name' class='form-control' value='<%= @actor.name %>'>
+      <input type='text' id='title' name='title' class='form-control' value='<%= @movie.title %>'>
     </div>
   </div>
     
   <div class='form-group'>
-    <label for='Dob' class="col-sm-2 control-label">Dob</label>
+    <label for='year' class="col-sm-2 control-label">Year</label>
     <div class='col-sm-10'>
-      <input type='text' id='Dob' name='Dob' class='form-control'  value='<%= @actor.dob %>'>
+      <input type='text' id='year' name='year' class='form-control'  value='<%= @movie.year %>'>
+    </div>
+    
+    <label for='duration' class="col-sm-2 control-label">Duration</label>
+    <div class='col-sm-10'>
+      <input type='text' id='duration' name='duration' class='form-control'  value='<%= @movie.duration %>'>
     </div>
     
     <label for='image_url' class="col-sm-2 control-label">Image url</label>
     <div class="col-sm-10">
-      <input type='text' id='image_url' name='image_url'  value='<%= @actor.image_url %>'>
+      <input type='text' id='image_url' name='image_url'  value='<%= @movie.image_url %>'>
     </div>
     
-    <label for='Bio' class="col-sm-2 control-label">actor biography</label>
+    <label for='description' class="col-sm-2 control-label">movie description</label>
     <div class="col-sm-10">
-      <textarea id='Bio' name='Bio' placeholder="Biography" rows="5"><%= @actor.bio %></textarea>
+      <textarea id='description' name='description' placeholder="Description" rows="5"><%= @movie.description %></textarea>
     </div>
   </div>
   
   <div class="form-group">
     <div class="col-sm-offset-2 col-sm-10">
-      <input type="submit" value="Update actor" class="btn btn-primary">
+      <input type="submit" value="Update movie" class="btn btn-primary">
     </div>
   
   </div>
