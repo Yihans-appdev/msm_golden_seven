@@ -1,0 +1,22 @@
+<div class='page-header'>
+  <h1><%= @director.name %></h1>
+</div>
+
+<body>
+  <div class='container-fluid'>
+    <div>
+      <%= @director.image_url%>
+    </div>
+    <div>
+      <h2>Date of birth:</h2>
+      <%= @director.dob %>
+    </div>
+    <div>
+      <h2>Biography: </h2>
+      <%= @director.bio %>
+    </div>
+  </div>
+  
+  <a href="/directors/delete_director/<%= @director.id%>" class='btn'>Delete director</a>
+  <a href="/directors/<%= @director.id %>/edit" class='btn'>Edit director</a>
+</body>

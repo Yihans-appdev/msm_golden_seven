@@ -1,0 +1,26 @@
+<div class='page-header'>
+  <h1><%= @movie.title %></h1>
+</div>
+
+<body>
+  <div class='container-fluid'>
+    <div>
+      <%= @movie.image_url%>
+    </div>
+    <div>
+      <h2>Year:</h2>
+      <%= @movie.year %>
+    </div>
+    <div>
+      <h2>Duration: </h2>
+      <%= @movie.duration %>
+    </div>
+    <div>
+      <h2>Description: </h2>
+      <%= @movie.description %>
+    </div>
+  </div>
+  
+  <a href="/movies/delete_movie/<%= @movie.id%>" class='btn'>Delete movie</a>
+  <a href="/movies/<%= @movie.id %>/edit" class='btn'>Edit movie</a>
+</body>

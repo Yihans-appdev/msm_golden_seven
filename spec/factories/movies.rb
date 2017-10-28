@@ -1,3 +1,17 @@
+# == Schema Information
+#
+# Table name: movies
+#
+#  id          :integer          not null, primary key
+#  title       :string
+#  year        :integer
+#  duration    :integer
+#  description :text
+#  image_url   :string
+#  created_at  :datetime         not null
+#  updated_at  :datetime         not null
+#
+
 # Copy this file into your spec/support folder; create one if you don't have it.
 # https://github.com/firstdraft/increasing_random/blob/master/increasing_random.rb
 

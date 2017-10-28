@@ -1,0 +1,22 @@
+<div class='page-header'>
+  <h1><%= @actor.name %></h1>
+</div>
+
+<body>
+  <div class='container-fluid'>
+    <div>
+      <%= @actor.image_url%>
+    </div>
+    <div>
+      <h2>Date of birth:</h2>
+      <%= @actor.dob %>
+    </div>
+    <div>
+      <h2>Biography: </h2>
+      <%= @actor.bio %>
+    </div>
+  </div>
+  
+  <a href="/actors/delete_actor/<%= @actor.id%>" class='btn'>Delete actor</a>
+  <a href="/actors/<%= @actor.id %>/edit" class='btn'>Edit actor</a>
+</body>

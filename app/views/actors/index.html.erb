@@ -1,0 +1,36 @@
+
+<div class='page-header'>
+  <h1>Actors</h1>
+</div>
+
+<a href='/actors/new_form' class='btn'>Add a new actor</a>
+
+<table class="table table-hover">
+  <thead>
+    <tr>
+      <th>Image</th>
+      <th>Name</th>
+      <th>Date of Birth</th>
+      <th>Biography</th>
+      <th></th>
+    </tr>
+  </thead>
+  
+  <tbody>
+    <% @actors.each do |actor| %>
+      <tr>
+        <td><%= actor.image_url %></td>
+        <td><%= actor.name %></td>
+        <td><%= actor.dob %></td>
+        <td><%= truncate(actor.bio, length: 50) %></td>
+        <td>
+          <a href="/actors/<%= actor.id %>" class='btn'>Show details</a>
+          <a href="/actors/<%= actor.id %>/edit" class='btn'>Edit actor</a>
+          <a href="/actors/delete_actor/<%= actor.id%>" class='btn'>Delete actor</a>
+        </td>
+      </tr>
+    <% end %>
+    
+  </tbody>
+</table>
+
